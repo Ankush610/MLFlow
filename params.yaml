@@ -1,0 +1,9 @@
+train_test_params:
+  test_size: 0.2
+  random_state: 42
+  shuffle: True
+
+kfold_params:
+  n_splits: 5
+  shuffle: True
+  random_state: 42
