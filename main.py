@@ -98,8 +98,10 @@ for model_name , model , params in models:
                 plt.xticks(rotation=45)
                 plt.tight_layout()
 
+                artifact_path = './artifacts'
+                os.makedirs(artifact_path, exist_ok=True)
                 # Save plot to a file
-                artifact_path = f"{col}_value_counts.png"
+                artifact_path = os.path.join(artifact_path, f"{col}_value_counts.png")
                 plt.savefig(artifact_path)
                 plt.close()
 
